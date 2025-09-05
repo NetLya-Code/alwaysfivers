@@ -137,7 +137,7 @@
   <img src="pudot.jpg" alt="Puding Sedot">
   <div class="product-info">
     <h3>Puding Sedot</h3>
-    <p class="price">Rp 8.000 / bottle</p>
+    <p class="price">Rp 6 .000 / bottle</p>
     <a href="javascript:void(0)" class="btn" 
        onclick="showInfo('Praktis! Tinggal sedot aja, ada rasa stroberi, coklat, sama bubble gum. Cocok bgt buat ngemil santai 😋.')">
        More Info
@@ -203,29 +203,41 @@
   </p>
 </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p style="text-align:center;">Order via WhatsApp!</p>
-    <div style="text-align:center; margin-top:10px;">
-    <a class="btn" 
-   href="https://wa.me/6285272752304?text=Halo%20fivers,%20saya%20mau%20order%20..." 
-   target="_blank">Chat WA</a>
-    </div>
-  </section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p style="text-align:center;">Isi form di bawah untuk order via WhatsApp!</p>
 
-  <footer>
-    <p>&copy; 2025 fivers. All rights reserved.</p>
-  </footer>
+  <div style="max-width:400px; margin:auto; text-align:left;">
+    <label for="nama">Nama :</label><br>
+    <input type="text" id="nama" style="width:100%; padding:8px; margin:5px 0;"><br><br>
 
-  <script>
-    // FAQ toggle
-    const items = document.querySelectorAll('.faq-item');
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
-  </script>
+    <label for="kelas">Kelas :</label><br>
+    <input type="text" id="kelas" style="width:100%; padding:8px; margin:5px 0;"><br><br>
+
+    <label for="pesanan">Pesanan :</label><br>
+    <input type="text" id="pesanan" style="width:100%; padding:8px; margin:5px 0;"><br><br>
+
+    <button onclick="kirimWA()" class="btn">Kirim via WhatsApp</button>
+  </div>
+</section>
+
+<script>
+function kirimWA() {
+  var nama = document.getElementById("nama").value;
+  var kelas = document.getElementById("kelas").value;
+  var pesanan = document.getElementById("pesanan").value;
+
+  var nomor = "6285272752304"; // nomor WA-mu
+  var text = "Halo fivers, saya mau order:%0A" +
+             "Nama : " + nama + "%0A" +
+             "Kelas : " + kelas + "%0A" +
+             "Pesanan : " + pesanan;
+
+  var url = "https://wa.me/" + nomor + "?text=" + text;
+  window.open(url, "_blank");
+}
+</script>
 </body>
 </html>
+
 
