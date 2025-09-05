@@ -132,6 +132,19 @@
   </div>
 </div>
 
+<!-- Produk Minipao -->
+<div class="product-card">
+  <img src="mnipao.jpg" alt="Minipao">
+  <div class="product-info">
+    <h3>Minipao</h3>
+    <p class="price">Rp 2.000 / pcs</p>    
+    <a href="javascript:void(0)" class="btn" 
+       onclick="showInfo('renyah di luar, empuk di dalam! isinya coklat lumer lohh🤎.')">
+       More Info
+    </a>
+  </div>
+</div>
+  
 <!-- Produk Puding Sedot -->
 <div class="product-card">
   <img src="pudot.jpg" alt="Puding Sedot">
@@ -229,9 +242,9 @@ function kirimWA() {
 
   var nomor = "6285272752304"; // nomor WA-mu
   var text = "Halo fivers, saya mau order:%0A" +
-             "Nama : " + nama + "%0A" +
-             "Kelas : " + kelas + "%0A" +
-             "Pesanan : " + pesanan;
+             "Nama           : " + nama + "%0A" +
+             "Ruangan Teori  : " + kelas + "%0A" +
+             "Pesanan        : " + pesanan;
 
   var url = "https://wa.me/" + nomor + "?text=" + text;
   window.open(url, "_blank");
@@ -239,5 +252,6 @@ function kirimWA() {
 </script>
 </body>
 </html>
+
 
 
